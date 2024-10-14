@@ -2,8 +2,6 @@
 
 ' entry point of GridScreen
 ' Note that we need to import this file in GridScreen.xml using relative path.
-
-
 sub Init()
     m.rowList = m.top.FindNode("rowList")
     m.rowList.SetFocus(true)
@@ -13,7 +11,7 @@ sub Init()
     m.titleLabel = m.top.FindNode("titleLabel")
     ' observe rowItemFocused so we can know when another item of rowList will be focused
     m.rowList.ObserveField("rowItemFocused", "OnItemFocused")
-end sub    
+end sub
 
 sub OnItemFocused() ' invoked when another item is focused
     focusedIndex = m.rowList.rowItemFocused ' get position of focused item
